@@ -1,0 +1,30 @@
+<body>
+<canvas id="canvas" height=400/>
+<script>
+function dibuja() {
+  var lienzo = document.getElementById('canvas');
+  if (lienzo.getContext) {
+    var ctx = lienzo.getContext('2d');
+
+    ctx.fillRect(25, 25, 100, 100);
+    ctx.clearRect(45, 45, 60, 60);
+    ctx.strokeRect(50, 50, 50, 50);
+  }
+}
+
+function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+ // Realizar un escalado del triangulo anterior con incremento del 50%
+                s=50
+                //triangulo(ctx, .....);
+                rx1=123; ry1=74; rancho=88; ralto=83
+                ctx.strokeRect(rx1, ry1, rancho, ralto);
+                ctx.strokeRect(rx1-(rancho*s/200), ry1-(ralto*s/200), rancho*(1+s/100), ralto*(1+s/100));
+  }
+}
+//dibuja();
+draw();
+</script>
+</body>

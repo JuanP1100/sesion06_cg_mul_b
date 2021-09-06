@@ -1,0 +1,54 @@
+<body>
+<canvas id="canvas" width="1080" height="920"/>
+<script>
+function dibuja() {
+  var lienzo = document.getElementById('canvas');
+  if (lienzo.getContext) {
+    var ctx = lienzo.getContext('2d');
+            
+    ctx.fillRect(25, 25, 100, 100);
+    ctx.clearRect(45, 45, 60, 60);
+    ctx.strokeRect(50, 50, 50, 50);
+  }
+}
+
+function rectangulogirado(tab, x1, y1, x2, y2, x3, y3, x4, y4, fill=false) 
+  {
+     tab.beginPath();
+     tab.moveTo(x1, y1);
+     tab.lineTo(x2, y2);
+     tab.lineTo(x3, y3);
+     tab.lineTo(x4, y4);
+     tab.closePath();
+     tab.stroke();
+  }
+        
+function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+            
+//realizar rotacion sobre el objeot
+
+  rx=220; ry=170; h=50; a=83
+  ang=45
+
+ /* ctx.rotate(45 * Math.PI/100);
+    ctx.strokeRect(50, 50, 50, 50) */
+
+     x1 = -h * Math.cos(ang) + a * Math.sin(ang) + rx;
+     y1 = -h * Math.sin(ang) - a * Math.cos(ang) + ry;
+     x2 = h * Math.cos(ang) + a * Math.sin(ang) + rx;
+     y2 = h * Math.sin(ang) - a * Math.cos(ang) + ry;
+     x3 = h * Math.cos(ang) - a * Math.sin(ang) + rx;
+     y3 = h * Math.sin(ang) + a * Math.cos(ang) + ry;
+     x4 = -h * Math.cos(ang) - a * Math.sin(ang) + rx;
+     y4 = -h * Math.sin(ang) + a * Math.cos(ang) + ry;
+
+     rectangulogirado(ctx, x1, y1, x2, y2, x3, y3, x4, y4, true)
+     ctx.stroke();    
+  }
+}
+draw();
+</script>
+
