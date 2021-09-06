@@ -1,0 +1,9 @@
+https://stackoverflow.com/questions/5127937/how-to-center-canvas-in-html5
+
+https://es.stackoverflow.com/questions/210384/necesito-centrar-la-figura-en-el-cuadro-del-canvas-y-desplazar-el-bot%C3%B3n-del-sele
+
+https://developer.mozilla.org/es/docs/Web/API/CanvasRenderingContext2D/rotate
+
+https://www.rgraph.net/canvas/reference/rotate.html
+
+https://aprende-web.net/NT/canvasav/canvasav7.php
